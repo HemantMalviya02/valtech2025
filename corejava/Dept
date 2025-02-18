@@ -1,0 +1,16 @@
+create table department(
+ id int primary key,
+ name varchar(50), 
+ location varchar(50)
+);
+
+Alter table employee add column dept_id int; 
+
+Alter table employee
+add constraint fk_dept
+foreign key (dept_id) references department(id);
+
+
+select * from employee;
+
+

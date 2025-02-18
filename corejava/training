@@ -1,0 +1,16 @@
+create table employee(
+id int primary key,
+name varchar(50),
+age int,
+salary float,
+gender varchar(10)
+);
+
+alter table employee add column level int;
+alter table employee add column experience int;
+
+select * from employee;
+
+
+
+

@@ -1,0 +1,10 @@
+create table student (
+	rollNo int primary key,
+	name varchar(20),
+	subject varchar(10),
+	percentage float,
+	gender varchar(10)
+);
+select * from student;
+insert into student(rollNo, name, subject, percentage, gender) 
+			values(1,"Hemant", "Physics", 70.2, MALE);
