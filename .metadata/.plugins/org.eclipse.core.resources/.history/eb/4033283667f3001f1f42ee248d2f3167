@@ -1,0 +1,8 @@
+package assignment.spring;
+
+public class CustomerDAO {
+	void save(Customer c);
+	void update(Customer c);
+	void delete(int id);
+	List<Customer> getAll();
+}

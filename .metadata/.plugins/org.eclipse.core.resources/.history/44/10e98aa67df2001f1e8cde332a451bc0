@@ -1,0 +1,16 @@
+package spring.test;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import spring.tx.EmployeeService;
+
+public class TxClient {
+
+	public static void main(String[] args) {
+		
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("tx.xml");
+		EmployeeService es = ctx.getBean(EmployeeService.class);
+		es.getAll().forEach(e -> System.out.println(e));
+	}
+
+}

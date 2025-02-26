@@ -1,0 +1,11 @@
+package assignment.spring;
+
+import java.util.List;
+
+public interface CustomerDAO {
+	void save(Customer c);
+	void update(Customer c);
+	void delete(int id);
+	Customer get(Long id);
+	List<Customer> getAll();
+}

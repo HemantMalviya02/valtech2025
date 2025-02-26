@@ -1,0 +1,24 @@
+package test;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import assignment.spring.Customer;
+import assignment.spring.CustomerDAOImpl;
+
+class AssignmentTest {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("springHib.xml");
+		CustomerDAOImpl cs = ctx.getBean(CustomerDAOImpl.class);
+		System.out.println(cs.getClass().getName());
+//		cs.save(new Customer("Raj", 20, "Ambaji", "Ahemdabad"));
+		Customer c = cs.get(2L);
+		c.setAge(28);
+		cs.update(c);
+//		cs.getAll().forEach(c -> System.out.println(c));
+		ctx.close();
+	}
+	
+	
+	
+}

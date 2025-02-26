@@ -1,0 +1,2 @@
+hibernate.connection.driver_class = org.postgresql.Driver
+hibernate.connection.url = jdbc:postgresql://localhost:5432/training

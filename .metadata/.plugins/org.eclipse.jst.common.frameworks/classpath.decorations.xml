@@ -1,0 +1,7 @@
+<classpath>
+  <container id="sprhib!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/Users/hemantmalviya/eclipse-workspace/gitdemo/sprhib/src/main/webapp/WEB-INF/lib/spring-aop-3.2.3.RELEASE.jar">
+      <source-attachment-path>/Users/hemantmalviya/Tools/spring-framework-3.2.3.RELEASE/libs/spring-aop-3.2.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

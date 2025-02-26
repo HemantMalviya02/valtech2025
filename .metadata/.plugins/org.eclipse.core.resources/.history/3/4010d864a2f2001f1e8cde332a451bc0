@@ -1,0 +1,9 @@
+package spring.tx;
+
+import org.hibernate.SessionFactory;
+
+public class EmployeeHibernateDAOImpl implements EmployeeDAO{
+	
+	private SessionFactory sessionFactory;
+	
+}

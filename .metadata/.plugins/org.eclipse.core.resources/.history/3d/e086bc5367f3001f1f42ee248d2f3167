@@ -1,0 +1,10 @@
+package assignment.spring;
+
+import java.util.List;
+
+public class CustomerDAO {
+	void save(Customer c);
+	void update(Customer c);
+	void delete(int id);
+	List<Customer> getAll();
+}

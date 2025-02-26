@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans xmlns:p="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+
+	
+	<p:bean id="p" class="spring.ioc.Point">
+	<p:property name="x" value="10"></p:property>		<!-- changing the values of x,y using setter -->
+	<p:property name="y" value="20"></p:property>
+	</p:bean>
+
+<!-- changing the values of x,y using ctor -->
+	<p:bean id="p1" class="spring.ioc.Point">
+		<p:constructor-arg value="100"></p:constructor-arg>
+		<p:constructor-arg value="200"></p:constructor-arg>
+	</p:bean>
+
+<!-- using setter changing value of line-->
+	<p:bean id="line" class="spring.ioc.Line">
+		<p:property name="start" ref="p"></p:property>
+		<p:property name="end">
+		<p:ref bean="p1"/>
+		</p:property>
+	</p:bean>
+	
+	<!-- using ctor changing value of line-->
+	<p:bean id="line1" class="spring.ioc.Line">
+		<p:constructor-arg>
+			<p:ref bean="p1"/>
+		</p:constructor-arg>
+		<p:constructor-arg ref="p"></p:constructor-arg>
+	</p:bean>
+	
+	<p:bean id="line2" class="spring.ioc.Line" autowire="byType">
+	</p:bean>
+
+	<p:bean id="arith" class="spring.ioc.ArithmeticImpl">
+	</p:bean>
+
+	<p:bean id="si" class="spring.ioc.SimpleInterestImpl" autowire="byType">
+		<!-- <p:property name="arithmetic" ref="arith"></p:property> -->
+	</p:bean>
+
+</p:beans>

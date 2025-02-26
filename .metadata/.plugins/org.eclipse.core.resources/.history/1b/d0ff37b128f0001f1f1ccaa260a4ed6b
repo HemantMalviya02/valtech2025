@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans xmlns:p="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+	<p:bean id="line" class="spring.ioc.Line" autowire="byName">
+	<p:property name="start">
+		<p:ref local="start"/>
+	</p:property>
+	<p:property name="end" ref="end"></p:property>
+	</p:bean>
+	
+	<p:bean id="start" class="spring.ioc.Point">
+	<p:property name="x" value="1000"></p:property>		
+	<p:property name="y" value="2000"></p:property>
+	</p:bean>
+</p:beans>

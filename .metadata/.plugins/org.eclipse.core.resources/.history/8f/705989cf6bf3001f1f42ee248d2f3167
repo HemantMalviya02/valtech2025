@@ -1,0 +1,12 @@
+package assignment.spring;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+public class hibernateClient {
+	public static void main(String[] args) {
+		SessionFactory sesFac = new AnnotationConfiguration()
+								.addAnnotatedClass(Customer.class)
+								.buildSessionFactory();
+	}
+}

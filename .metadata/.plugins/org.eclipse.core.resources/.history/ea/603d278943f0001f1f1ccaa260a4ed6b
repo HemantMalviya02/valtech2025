@@ -1,0 +1,5 @@
+package spring.aop;
+
+public class CounterAdvice {
+
+}

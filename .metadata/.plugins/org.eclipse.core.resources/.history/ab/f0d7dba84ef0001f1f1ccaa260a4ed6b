@@ -1,0 +1,14 @@
+package spring.aop;
+
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
+
+public class PositiveParamsAdvice implements MethodInterceptor{
+
+	@Override
+	public Object invoke(MethodInvocation mi) throws Throwable {
+		System.out.println("Inside Around Advice");
+		return 0;
+	}
+
+}

@@ -1,0 +1,29 @@
+package hibernate;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "ttx")
+
+public class ChequeTx extends Tx {
+	private int chequeNo;
+	
+	public ChequeTx() {}
+	
+	
+	public ChequeTx(double amount, int chequeNo) {
+		super(amount);
+		this.chequeNo = chequeNo;
+	}
+
+
+	public int getChequeNo() {
+		return chequeNo;
+	}
+
+	public void setChequeNo(int chequeNo) {
+		this.chequeNo = chequeNo;
+	}
+	
+}

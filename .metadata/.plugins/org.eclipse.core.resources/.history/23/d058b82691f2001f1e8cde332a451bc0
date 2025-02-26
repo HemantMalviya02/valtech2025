@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans default-autowire="byType" xmlns:p="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+
+	<p:bean id="empService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+	
+	</p:bean>
+
+	<p:bean id="empService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<p:property name="target">
+			<p:bean class="spring.tx.EmployeeServiceImpl"></p:bean>
+		</p:property>
+	</p:bean>
+	
+	<p:bean class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<p:property name="transactionAttributes">
+			<p:props>
+				<p:prop key="*">PROPAGATION_REQUIRED</p:prop>
+				<p:prop key="get*">PROPAGATION_SUPPORTS</p:prop>
+			</p:props>
+		</p:property>
+	</p:bean>
+	
+	<p:bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager"></p:bean>
+	
+	<p:bean class="spring.tx.EmployeeDAOImpl">
+	</p:bean>
+	
+	<p:bean class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<p:property name="driverClassName" value="org.postgresql.Driver"></p:property>
+		<p:property name="url" value="jdbc:postgresql://localhost:5432/training"></p:property>
+		<p:property name="username" value="postgres"></p:property>
+		<p:property name="password" value="postgres"></p:property>
+	
+	</p:bean>
+</p:beans>

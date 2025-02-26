@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans xmlns:p="http://www.springframework.org/schema/beans" 
+
+xmlns:ctx="http://www.springframework.org/schema/context"
+xmlns:tx="http://www.springframework.org/schema/tx"
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/tx spring-tx-3.2.xsd 
+http://www.springframework.org/schema/context spring-context-3.2.xsd 
+http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+	<!-- <ctx:component-scan base-package="spring.tx"></ctx:component-scan> -->
+	
+	<tx:annotation-driven transaction-manager="tm"/>
+	
+	<p:bean id="tm" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"></p:bean>
+
+	<p:bean class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<p:property name="driverClassName" value="org.postgresql.Driver"></p:property>
+		<p:property name="url" value="jdbc:postgresql://localhost:5432/training"></p:property>
+		<p:property name="username" value="postgres"></p:property>
+		<p:property name="password" value="postgres"></p:property>
+	</p:bean>
+
+
+</p:beans>

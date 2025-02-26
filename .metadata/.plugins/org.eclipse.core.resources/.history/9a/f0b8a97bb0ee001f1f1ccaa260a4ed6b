@@ -1,0 +1,18 @@
+package hibernate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+public class Customer {
+	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "custseq")
+	@SequenceGenerator(name = "custseq", sequenceName = "cust_name", allocationSize = 1)
+	
+	private long id;
+	private String name;
+	private int age;
+	private boolean gender;
+}

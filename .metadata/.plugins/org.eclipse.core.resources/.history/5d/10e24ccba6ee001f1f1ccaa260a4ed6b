@@ -1,0 +1,39 @@
+package hibernate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+public class Tx {
+	
+	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "txseq")
+	@SequenceGenerator(name = "txseq", sequenceName = "tx_seq")
+	private long id;
+	private double amount;
+	
+	public Tx() {}
+	
+	
+	public Tx(double amount) {
+		super();
+		this.amount = amount;
+	}
+
+
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	
+}
