@@ -1,8 +1,0 @@
-package hibernate;
-
-public class Student {
-	private String name;
-	private String fatherName;
-	private String stream;
-	private long mobile;
-}

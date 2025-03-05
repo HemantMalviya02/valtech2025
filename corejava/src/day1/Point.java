@@ -19,7 +19,7 @@ public class Point {
 		return y;
 	}
 	
-	public abstract void markMeOnScreen();
+//	public abstract void markMeOnScreen();
 	public double distance() {
 		return Math.sqrt(x*x + y*y);
 	}
@@ -39,7 +39,7 @@ public class Point {
 		System.out.println(p);
 		System.out.println(p.distance());
 		System.out.println(p.distance(100,200));
-		System.out.println(p.distance()p);
+//		System.out.println(p.distance()p);
 	}
 	@Override
 	public String toString() {

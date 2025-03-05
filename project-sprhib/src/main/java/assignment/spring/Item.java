@@ -13,19 +13,19 @@ public class Item {
 	@SequenceGenerator(name="orderseq", sequenceName = "order_seq", allocationSize = 1)
 	private long id;
 	private String name;
-	private String desc_item;
-	private int curr_quantity;
-	private int reorder_quantity;
-	private int max_quantity;
+	private String descItem;
+	private int currQuantity;
+	private int reorderQuantity;   // minimum quantity
+	private int maxQuantity;
 	
 	public Item() {}
 
-	public Item(String name, String desc_item, int curr_quantity, int reorder_quantity, int max_quantity) {
+	public Item(String name, String descItem, int currQuantity, int reorderQuantity, int maxQuantity) {
 		this.name = name;
-		this.desc_item = desc_item;
-		this.curr_quantity = curr_quantity;
-		this.reorder_quantity = reorder_quantity;
-		this.max_quantity = max_quantity;
+		this.descItem = descItem;
+		this.currQuantity = currQuantity;
+		this.reorderQuantity = reorderQuantity;
+		this.maxQuantity = maxQuantity;
 	}
 
 	public long getId() {
@@ -44,36 +44,43 @@ public class Item {
 		this.name = name;
 	}
 
-	public String getDesc_item() {
-		return desc_item;
+	public String getDescItem() {
+		return descItem;
 	}
 
-	public void setDesc_item(String desc_item) {
-		this.desc_item = desc_item;
+	public void setDescItem(String desc_item) {
+		this.descItem = desc_item;
 	}
 
-	public int getCurr_quantity() {
-		return curr_quantity;
+	public int getCurrQuantity() {
+		return currQuantity;
 	}
 
-	public void setCurr_quantity(int curr_quantity) {
-		this.curr_quantity = curr_quantity;
+	public void setCurrQuantity(int curr_quantity) {
+		this.currQuantity = curr_quantity;
 	}
 
-	public int getReorder_quantity() {
-		return reorder_quantity;
+	public int getReorderQuantity() {
+		return reorderQuantity;
 	}
 
-	public void setReorder_quantity(int reorder_quantity) {
-		this.reorder_quantity = reorder_quantity;
+	public void setReorderQuantity(int reorder_quantity) {
+		this.reorderQuantity = reorder_quantity;
 	}
 
-	public int getMax_quantity() {
-		return max_quantity;
+	public int getMaxQuantity() {
+		return maxQuantity;
 	}
 
-	public void setMax_quantity(int max_quantity) {
-		this.max_quantity = max_quantity;
+	public void setMaxQuantity(int max_quantity) {
+		this.maxQuantity = max_quantity;
 	}
+
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", descItem=" + descItem + ", currQuantity=" + currQuantity
+				+ ", reorderQuantity=" + reorderQuantity + ", maxQuantity=" + maxQuantity + "]";
+	}
+
 	
 }

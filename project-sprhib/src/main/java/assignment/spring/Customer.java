@@ -18,11 +18,8 @@ public class Customer {
 	private int age;
 	private String address;
 	private String permanent_address;
-	
-	
+		
 	public Customer() {}
-
-
 
 	public Customer(String name, int age, String address, String permanent_address) {
 		this.name = name;
@@ -31,16 +28,12 @@ public class Customer {
 		this.permanent_address = permanent_address;
 	}
 
-	
-
 
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address
 				+ ", permanent_address=" + permanent_address + "]";
 	}
-
-
 
 	public long getId() {
 		return id;

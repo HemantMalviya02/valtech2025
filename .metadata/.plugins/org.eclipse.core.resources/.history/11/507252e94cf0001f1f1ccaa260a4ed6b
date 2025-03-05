@@ -1,5 +1,0 @@
-package spring.aop;
-
-public class PositiveParamsAdvice {
-
-}

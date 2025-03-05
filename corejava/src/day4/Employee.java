@@ -1,4 +1,6 @@
 package day4;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import day4.Gender;
@@ -14,15 +16,17 @@ public class Employee implements Comparable<Employee>{
 	private int level;
 	private int experience;
 	
-	public Employee(long _id, String _name, int _age, float _salary, Gender _gender,
-			int _level, int _experience) {
-		id = _id;
-		name = _name;
-		age = _age;
-		salary = _salary;
-		gender = _gender;
-		level = _level;
-		experience = _experience;
+	public static List<Employee> employee = new ArrayList<Employee>();
+	
+	public Employee(long id, String name, int age, float salary, Gender gender,
+			int level, int experience) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+		this.gender = gender;
+		this.level = level;
+		this.experience = experience;
 	}
 	
 	
@@ -120,16 +124,16 @@ public class Employee implements Comparable<Employee>{
 //comparable
 
 @Override
-public int compareTo(Employee o) {
-	int compLevel = Integer.compare(this.level, o.level);
+public int compareTo(Employee e) {
+	int compLevel = Integer.compare(this.level, e.level);
 	if(compLevel != 0)
 		return compLevel;
 	
-	int compExp = Integer.compare(this.experience, o.experience);
+	int compExp = Integer.compare(this.experience, e.experience);
 	if (compExp != 0)
 			return compExp;
 	
-	int compGender = this.gender.compareTo(o.gender);
+	int compGender = this.gender.compareTo(e.gender);
 	if(compGender != 0)
 			return compGender;
 	
@@ -137,8 +141,9 @@ public int compareTo(Employee o) {
 //	if(compSalary != 0) 
 //			return compSalary;
 	
-	return Float.compare(this.salary, o.salary);
+	return Float.compare(this.salary, e.salary);
  }
+
 //comparator
 
 //public static Comparator<Employee>byLevel() {
@@ -172,18 +177,18 @@ public int compareTo(Employee o) {
 
 
 	//	default ctor
-	public Employee() {
-		
-	}
+	public Employee() {}
 	
 	
 	public static class EmployeeBuilder {
 		
 		private Employee emp;
-		public EmployeeBuilder(Employee _emp) {
-			emp = _emp;
+		
+		public EmployeeBuilder(Employee emp) {
+			this.emp = emp;
 		}
 		public Employee build() {
+			employee.add(emp);
 			return emp;
 		}
 		public EmployeeBuilder id(int id) {

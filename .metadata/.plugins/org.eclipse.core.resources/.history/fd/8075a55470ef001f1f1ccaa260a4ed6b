@@ -1,8 +1,0 @@
-package hibernate;
-
-import java.io.Serializable;
-
-public class StudentId implements Serializable{
-	private int rollNo;
-	private int year;
-}

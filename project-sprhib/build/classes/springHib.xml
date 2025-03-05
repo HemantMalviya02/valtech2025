@@ -4,14 +4,23 @@
 	
 	<p:bean class="assignment.spring.CustomerDAOImpl"></p:bean>
 	<p:bean class="assignment.spring.ItemDAOImpl"></p:bean>
+	<p:bean class="assignment.spring.OrderDAOImpl"></p:bean>
+	<p:bean class="assignment.spring.LineItemDAOImpl"></p:bean>
+	
+	<p:bean class="assignment.spring.InventoryServiceImpl"></p:bean>
+	<p:bean class="assignment.spring.OrderServiceImpl"></p:bean>
+	
+	
+	
+	
 	
 	<p:bean autowire="no" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<p:property name="annotatedClasses">
 			<p:list>
 				<p:value>assignment.spring.Customer</p:value>
-				<p:value>assignment.spring.CustomerDAOImpl</p:value>
 				<p:value>assignment.spring.Item</p:value>
-				<p:value>assignment.spring.ItemDAOImpl</p:value>
+				<p:value>assignment.spring.Order</p:value>
+				<p:value>assignment.spring.LineItems</p:value>
 			</p:list>
 		</p:property>
 		<p:property name="dataSource" ref="ds"></p:property>

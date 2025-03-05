@@ -7,10 +7,10 @@ public class Point3D extends Point {
 		super(x,y);
 		this.z = z;
 	}
-	@Override
-	public double distance() {
-		return super.distance();
-	}
+//	@Override
+//	public double distance() {
+//		return super.distance();
+//	}
 	
 	public double getZ() {
 		return z;
@@ -19,7 +19,7 @@ public class Point3D extends Point {
 		this.z = z;
 	}
 	
-	public double distance(point 3D)
+//	public double distance(point 3D)
 	public double distance(double x, double y, double z) {
 		double diffx = getX() - x;
 		double diffy = getY() - y;

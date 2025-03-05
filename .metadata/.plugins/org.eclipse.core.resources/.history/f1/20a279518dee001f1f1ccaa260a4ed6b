@@ -1,9 +1,0 @@
-hibernate.dialect = org.hibernate.dialect.PostgresDialect
-
-hibernate.connection.driver_class = org.postgresql.Driver
-hibernate.connection.url = jdbc:postgresql://localhost:5432/training
-hibernate.connection.username = postgres
-hibernate.connection.password = postgres
-
-hibernate.hbm2ddl.auto = create
-hibernate.show_sql = true
