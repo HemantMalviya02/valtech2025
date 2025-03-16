@@ -15,18 +15,23 @@ public class OrderServiceImpl implements OrderService {
 	
 	@Override
 	public void placeOrder(Order order) {
-		boolean placeOrder  = false;
-		for (LineItems lineItem : order.getLineitems()) {
-//			System.out.println("+++++++++++++++"+lineItem.getItem().getId());
-			placeOrder = inventoryService.existingItem(lineItem.getItem().getId(), lineItem.getQuantity());
+	
+		if(Customer.CustomerStatus.DISABLE.equals(order.getCustomer().getCstatus())) {
+			System.out.println("Invalid Customer!");
 		}
-		if(placeOrder) {
-			order.setStatus(Status.PLACED);
+		else  {
+			boolean placeOrder  = false;
+			for (LineItems lineItem : order.getLineitems()) {
+				placeOrder = inventoryService.existingItem(lineItem.getItem().getId(), lineItem.getQuantity());
+			}
+			if(placeOrder) {
+				order.setStatus(Status.PLACED);
+			}
+			else {
+				order.setStatus(Status.FAIL);
+			}
+			orderDAO.save(order);
 		}
-		else {
-			order.setStatus(Status.FAIL);
-		}
-		orderDAO.save(order);
 	}
 	
 	@Override
@@ -45,6 +50,7 @@ public class OrderServiceImpl implements OrderService {
 	public List<Order> getAll() {
 		return orderDAO.getAll();
 	}
+	
 	
 	public void setOrderDAO(OrderDAO orderDAO) {
 		this.orderDAO = orderDAO;

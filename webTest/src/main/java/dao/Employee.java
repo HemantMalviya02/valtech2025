@@ -15,16 +15,16 @@ public class Employee implements Comparable<Employee>{
 	private int level;
 	private int experience;
 	
-	public Employee(long _id, String _name, int _age, float _salary, Gender _gender,
-			int _level, int _experience, int _depId) {
-		id = _id;
-		name = _name;
-		age = _age;
-		salary = _salary;
-		gender = _gender;
-		level = _level;
-		experience = _experience;
-		deptId = _depId;
+	public Employee(long id, String name, int age, float salary, Gender gender,
+			int level, int experience, int depId) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+		this.gender = gender;
+		this.level = level;
+		this.experience = experience;
+		this.deptId = depId;
 	}
 	
 	

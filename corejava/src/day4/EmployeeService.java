@@ -20,11 +20,13 @@ public class EmployeeService {
 		return (employees.stream().filter(emp->emp.getName().contains(Character.toString(ch))).collect(Collectors.toList()));
 	}
 	
-	public double TotalSalaryOfEmployee(List<Employee> employees) {
-		return (employees.stream().mapToDouble(Employee::getSalary).sum());
-	}
-		
 	public List<Employee> searchByLevelAndGender(List<Employee> employees, int level, Gender gender) {
 		return (employees.stream().filter(emp->emp.getLevel() == level && emp.getGender() == gender).collect(Collectors.toList()));
 	}
+	
+	public double totalSalaryOfEmployee(List<Employee> employees) {
+		return (employees.stream().mapToDouble(Employee::getSalary).sum());
+	}
+		
+	
 }

@@ -12,9 +12,7 @@ public class InventoryServiceImpl implements InventoryService{
 	private ItemDAO itemDAO;
 	
 	public boolean existingItem(long itemId, int quantityAsked) {
-//		System.out.println("-------------------------"+itemId);
 		Item existingItem = itemDAO.get(itemId);
-//		System.out.println("==========================");
 		System.out.println(existingItem);
 		
 		if(existingItem != null && existingItem.getCurrQuantity() >= quantityAsked) {
@@ -57,19 +55,16 @@ public class InventoryServiceImpl implements InventoryService{
 	@Override
 	public void save(Item i) {
 		itemDAO.save(i);
-		
 	}
 
 	@Override
 	public void update(Item i) {
 		itemDAO.update(i);
-		
 	}
 
 	@Override
 	public void delete(long id) {
 		itemDAO.delete(id);
-		
 	}
 
 	@Override
@@ -85,6 +80,5 @@ public class InventoryServiceImpl implements InventoryService{
 	public void setItemDAO(ItemDAO itemDAO) {
 		this.itemDAO = itemDAO;
 	}
-	
 	
 }

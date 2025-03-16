@@ -97,7 +97,6 @@ public class Employee implements Comparable<Employee>{
 
 	@Override
 	public String toString(){
-//		return make+" "+model+" "+Variant+" "+year+" "+version;
 		return new StringBuilder()
 				.append(id)
 				.append(" ")

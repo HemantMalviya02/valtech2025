@@ -30,7 +30,7 @@ public class Order {
 	@OneToMany(targetEntity = LineItems.class,  mappedBy = "order", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private List<LineItems> lineitems;
 
-	public enum Status {PLACED,FAIL,DISPATCHED,SHIPPED,ARRIVED;}
+	public enum Status {PLACED,FAIL;}
 	
 	@Enumerated(EnumType.STRING)
 	private Status status;

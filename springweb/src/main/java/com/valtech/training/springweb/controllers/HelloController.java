@@ -20,8 +20,7 @@ public class HelloController {
 //		return view;
 //	}
 	
-//	preferred way down
-	
+//	another preferred way,
 	@PostMapping("/login")
 	public String handleLoginForm(@ModelAttribute loginVO login, Model model) {
 		if("scott".equals(login.getUsername()) && "tiger".equals(login.getPassword())) {

@@ -1,6 +1,8 @@
 package assignment.spring;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,22 +19,32 @@ public class Customer {
 	private String name;
 	private int age;
 	private String address;
-	private String permanent_address;
+	private String permanentAddress;
+	
+	@Enumerated(EnumType.STRING)
+	private CustomerStatus cstatus = CustomerStatus.ENABLE;
+	
+	
+	public enum CustomerStatus{ENABLE, DISABLE;}
+
 		
 	public Customer() {}
 
-	public Customer(String name, int age, String address, String permanent_address) {
+	public Customer(String name, int age, String address, String permanentAddress) {
 		this.name = name;
 		this.age = age;
 		this.address = address;
-		this.permanent_address = permanent_address;
+		this.permanentAddress = permanentAddress;
+//		this.cstatus = cs;
 	}
 
 
+	
+
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address
-				+ ", permanent_address=" + permanent_address + "]";
+		return "Customer [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + ", permanentAddress="
+				+ permanentAddress + ", cstatus=" + cstatus + "]";
 	}
 
 	public long getId() {
@@ -67,12 +79,21 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getPermanent_address() {
-		return permanent_address;
+
+	public String getPermanentAddress() {
+		return permanentAddress;
 	}
 
-	public void setPermanent_address(String permanent_address) {
-		this.permanent_address = permanent_address;
+	public void setPermanentAddress(String permanentAddress) {
+		this.permanentAddress = permanentAddress;
+	}
+
+	public CustomerStatus getCstatus() {
+		return cstatus;
+	}
+
+	public void setCstatus(CustomerStatus cstatus) {
+		this.cstatus = cstatus;
 	}	
-	
+		
 }

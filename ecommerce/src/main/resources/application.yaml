@@ -1,0 +1,26 @@
+#server:
+  #port: 9020
+
+spring:
+  application:
+    name: CUSTOMER-SERVICE
+
+  datasource:
+    driver-class: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: postgres
+    password: postgres
+
+  sql:
+    init: 
+      mode: always
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsps/
+      suffix: .jsp

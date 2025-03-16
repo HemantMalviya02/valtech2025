@@ -9,6 +9,7 @@
 	
 	<p:bean class="assignment.spring.InventoryServiceImpl"></p:bean>
 	<p:bean class="assignment.spring.OrderServiceImpl"></p:bean>
+	<p:bean class="assignment.spring.CustomerServiceImpl"></p:bean>
 	
 	
 	

@@ -7,8 +7,11 @@ import java.util.List;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import assignment.spring.Customer;
+import assignment.spring.Customer.CustomerStatus;
 import assignment.spring.CustomerDAO;
 import assignment.spring.CustomerDAOImpl;
+import assignment.spring.CustomerService;
+import assignment.spring.CustomerServiceImpl;
 import assignment.spring.InventoryService;
 import assignment.spring.InventoryServiceImpl;
 import assignment.spring.Item;
@@ -31,7 +34,7 @@ class AssignmentTest {
 		
 		InventoryService is = ctx.getBean(InventoryServiceImpl.class);
 		OrderService os = ctx.getBean(OrderServiceImpl.class);
-		CustomerDAOImpl cs = ctx.getBean(CustomerDAOImpl.class);    // not creating customerService bcoz the methods are same as in DAOImpl.
+		CustomerService cs = ctx.getBean(CustomerServiceImpl.class);    // not creating customerService bcoz the methods are same as in DAOImpl.
 		
 		
 //		LineItemDAOImpl li = ctx.getBean(LineItemDAOImpl.class);
@@ -45,7 +48,7 @@ class AssignmentTest {
 		
 //		---------------FOR ORDER---------------------
 		
-		Customer c = cs.get(2L);
+		Customer c = cs.getCustomer(2L);
 //		System.out.println(c);
 //		Order o = new Order();
 //		o.setCustomer(c);
@@ -103,12 +106,17 @@ class AssignmentTest {
 //		---------------FOR CUSTOMER---------------------
 		
 //		System.out.println(cs.getClass().getName());
-//		cs.save(new Customer("Yash", 23, "Ahemdabad", "Ambaji"));
-//		Customer c = cs.get(2L);
+//		cs.save(new Customer("Dev", 30, "Mumbai", "Dehradun"));
+		Customer c1 = cs.getCustomer(3L);
 //		c.setAge(28);
 //		cs.update(c);
 //		cs.getAll().forEach(ct -> System.out.println(ct));
-//		
+		
+
+//		cs.addCustomer(new Customer("Rohit", 21, "Pune", "Abu"));
+		
+		cs.disableCustomer(c1);	
+//		cs.enableCustomer(c1);
 		
 		ctx.close();
 	}
