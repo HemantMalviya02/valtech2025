@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.valtech.training.leave.services.LeaveService;
 import com.valtech.training.leave.vos.ApproveLeaveVO;
+import com.valtech.training.leave.vos.EmployeeVO;
 import com.valtech.training.leave.vos.LeaveVO;
 
 @RestController
@@ -36,7 +37,10 @@ public class LeaveController {
 	
 	@GetMapping("/{id}")
 	public LeaveVO getLeave(@PathVariable("id") long id) {
-		return leaveService.getLeave(id);
+		LeaveVO vo =  leaveService.getLeave(id);
+		EmployeeVO man = leaveService.getManager(vo.employeeId());
+		System.out.println("Emp = "+vo.employeeId() + " Manager = "+ man.id());
+		return vo;
 	}
 	
 	@GetMapping("/")

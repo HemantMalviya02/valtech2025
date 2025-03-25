@@ -2,4 +2,5 @@
 <typeInfoHistroy>
     <typeInfo handle="=sprhib/src\/main\/java&lt;hibernate{Tx.java[Tx" modifiers="1" timestamp="1740113141000"/>
     <typeInfo handle="=sprhib/\/Users\/hemantmalviya\/eclipse-workspace\/gitdemo\/sprhib\/src\/main\/webapp\/WEB-INF\/lib\/spring-orm-3.2.3.RELEASE.jar&lt;org.springframework.orm.hibernate3(LocalSessionFactoryBean.class[LocalSessionFactoryBean" modifiers="33" timestamp="1739944233000"/>
+    <typeInfo handle="=spring-security-jwt/\/Users\/hemantmalviya\/.m2\/repository\/org\/springframework\/spring-web\/6.2.3\/spring-web-6.2.3.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-web=/=/maven.version=/6.2.3=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.web.filter(OncePerRequestFilter.class[OncePerRequestFilter" modifiers="1057" timestamp="1740635634000"/>
 </typeInfoHistroy>

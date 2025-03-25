@@ -16,10 +16,8 @@ public class Employee implements Comparable<Employee>{
 	private String name;
 	private int age;
 	private float salary;
-	
 	@Enumerated(EnumType.STRING)
 	private Gender gender;
-	
 	private int level;
 	private int experience;
 	

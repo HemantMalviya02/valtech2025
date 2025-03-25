@@ -32,8 +32,13 @@ public class QuestionController {
 		return questionService.getAll();
 	}
 	
-	@GetMapping("/{topic}")
-	public List<QuestionVO> getAllByTopic(@PathVariable String topic) {
+	@GetMapping("/{id}")
+	public QuestionVO getQuestion(@PathVariable("") long id) {
+		return questionService.get(id);
+	}
+//	
+	@GetMapping("/topic/{topic}")
+	public List<QuestionVO> getAllByTopic(@PathVariable("topic") String topic) {
 		return questionService.findAllByTopic(topic);
 	}
 }

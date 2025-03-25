@@ -16,8 +16,8 @@ class EmployeeClientTest {
 	
 	@Test
 	void test() {
-		assertEquals(1, client.getManager(2));
-		assertEquals(2, client.getManager(5));
+		assertEquals(1, client.getEmployeeAsManager(2));
+		assertEquals(2, client.getEmployeeAsManager(5));
 	}
 
 }

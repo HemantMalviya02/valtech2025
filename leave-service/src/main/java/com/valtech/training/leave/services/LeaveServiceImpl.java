@@ -14,6 +14,7 @@ import com.valtech.training.leave.entities.LeaveMaster;
 import com.valtech.training.leave.repos.LeaveMasterRepo;
 import com.valtech.training.leave.repos.LeaveRepo;
 import com.valtech.training.leave.vos.ApproveLeaveVO;
+import com.valtech.training.leave.vos.EmployeeVO;
 import com.valtech.training.leave.vos.LeaveMasterVO;
 import com.valtech.training.leave.vos.LeaveVO;
 
@@ -43,7 +44,7 @@ public class LeaveServiceImpl implements LeaveService {
 	public LeaveVO approveLeave(ApproveLeaveVO vo) {
 		
 		Leave leave = leaveRepo.getReferenceById(vo.leaveId());
-		long manager = employeeClient.getManager((leave.getEmployeeId()));    //get from employee service. 
+		long manager = employeeClient.getEmployeeAsManager((leave.getEmployeeId())).managerId();    //get from employee service. 
 		if(manager == vo.manager()) {
 			LeaveMaster lm = leaveMasterRepo.findByEmployeeId(leave.getEmployeeId());
 			lm.takeLeaves(leave);
@@ -125,6 +126,11 @@ public class LeaveServiceImpl implements LeaveService {
 		vo.updateTo(leave);
 		leave = leaveRepo.save(leave);
 		return LeaveVO.from(leave);
+	}
+
+	@Override
+	public EmployeeVO getManager(long employeeId) {
+		return employeeClient.getEmployeeAsManager(employeeId);
 	}
 
 	

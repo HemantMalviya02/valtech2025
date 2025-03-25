@@ -16,6 +16,7 @@ public class gateawayConfig {
 				.route(p -> p.path("/api/v1/leaves/*").uri("lb://LEAVE-SERVICE"))
 				.route(p -> p.path("/api/v1/leaveMasters/*").uri("lb://LEAVE-SERVICE"))
 				.route(p -> p.path("/api/v1/questions/*").uri("lb://question"))
+				.route(p -> p.path("/api/v1/quiz/*").uri("lb://QUIZ-SERVICE"))
 				.build();
 	}
 }

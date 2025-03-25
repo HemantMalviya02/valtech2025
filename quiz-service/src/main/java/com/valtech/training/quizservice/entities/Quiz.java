@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 
 @Entity
@@ -18,16 +19,24 @@ public class Quiz {
 	@SequenceGenerator(name = "quiz_seq", sequenceName = "quiz_seq", allocationSize = 1)
 	private long id;
 	
+	private String username;
 	private String topic;
 	private int noOfQuestions;
 	
-	@ElementCollection
-	@CollectionTable(name = "quiz_table", joinColumns = @JoinColumn(name = "quiz_id"))
-	private List<Long> questionId;
+//	@ElementCollection     //list cant be stored directly, so it will create a new table and store in it along with id
+//	@CollectionTable(name = "quiz_table", joinColumns = @JoinColumn(name = "quiz_id"))
+//	private List<Long> questionId;
+	
+	@OneToMany()
+	@JoinColumn(name="questionResult_id", referencedColumnName = "id")
+	private List<QuestionResult> questionRes;
+	
+	public Quiz() {}
 
-	public Quiz(String topic, int noOfQuestions) {
+	public Quiz(String topic, int noOfQuestions, String username) {
 		this.topic = topic;
 		this.noOfQuestions = noOfQuestions;
+		this.username = username;
 	}
 
 	public long getId() {
@@ -54,13 +63,21 @@ public class Quiz {
 		this.noOfQuestions = noOfQuestions;
 	}
 
-	public List<Long> getQuestionId() {
-		return questionId;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setQuestionId(List<Long> questionId) {
-		this.questionId = questionId;
+	public void setUsername(String username) {
+		this.username = username;
 	}
+
+	public List<QuestionResult> getQuestionRes() {
+		return questionRes;
+	}
+
+	public void setQuestionRes(List<QuestionResult> questionRes) {
+		this.questionRes = questionRes;
+	}	
 	
 	
 }

@@ -11,6 +11,6 @@ import com.valtech.training.question.vos.QuestionVO;
 @Repository
 public interface QuestionRepo extends JpaRepository<Question, Long>{
 
-	List<QuestionVO> findAllByTopic(String topic);
+	List<Question> findAllByTopic(String topic);
 
 }
