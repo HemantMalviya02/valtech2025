@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ECOMMERCE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: postgres
+    password: postgres
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsps/
+      suffix: .jsp
+
+server:
+  port: 9030

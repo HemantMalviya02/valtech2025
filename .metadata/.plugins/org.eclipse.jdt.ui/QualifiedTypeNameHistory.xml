@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
-    <fullyQualifiedTypeName name="org.mockito.junit.MockitoJUnitRunner"/>
-    <fullyQualifiedTypeName name="mocks.EmployeeDAO"/>
-    <fullyQualifiedTypeName name="org.bouncycastle.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="com.valtech.training.registerservice.entities.User"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="com.valtech.training.quizservice.vos.QuestionVO"/>
     <fullyQualifiedTypeName name="com.valtech.training.quizservice.vos.QuestionResultVO"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="com.valtech.training.ecommerce.entities.LineItems"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.FetchType"/>
+    <fullyQualifiedTypeName name="com.valtech.training.ecommerce.commons.OrderStatus"/>
+    <fullyQualifiedTypeName name="com.valtech.training.ecommerce.commons.CustomerStatus"/>
 </qualifiedTypeNameHistroy>

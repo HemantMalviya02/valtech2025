@@ -1440,3 +1440,77 @@ Contains: Missing org.springframework.cloud:spring-cloud-starter-loadbalancer:ja
 !MESSAGE Could not resolve artifact org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:javadoc:4.1.2
 !SUBENTRY 2 org.eclipse.m2e.core 4 0 2025-03-27 14:38:17.109
 !MESSAGE Missing org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:javadoc:4.1.2
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.044
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.053
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.059
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.062
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.066
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-27 15:11:40.071
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+!SESSION 2025-03-27 19:12:26.386 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring -data /Users/hemantmalviya/eclipse-workspace/gitdemo
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-27 19:12:32.467
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-27 19:12:33.781
+!MESSAGE Logback config file: /Users/hemantmalviya/eclipse-workspace/gitdemo/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-03-27 20:17:26.020
+!MESSAGE The artifact org.hibernate:hibernate-spatial:jar:6.6.11.Final has been relocated to org.hibernate.orm:hibernate-spatial:jar:6.6.11.Final
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-03-28 15:51:54.908
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2025-04-04 10:14:19.368 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring -data /Users/hemantmalviya/eclipse-workspace/gitdemo
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-04 10:14:20.259
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-04-04 10:14:20.759
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-04 10:14:21.281
+!MESSAGE Logback config file: /Users/hemantmalviya/eclipse-workspace/gitdemo/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-04-04 10:14:27.366
+!MESSAGE The artifact org.hibernate:hibernate-spatial:jar:6.6.11.Final has been relocated to org.hibernate.orm:hibernate-spatial:jar:6.6.11.Final
+!SESSION 2025-04-09 09:00:12.412 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/hemantmalviya/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-09 09:00:18.263
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-09 09:00:19.675
+!MESSAGE Logback config file: /Users/hemantmalviya/eclipse-workspace/gitdemo/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.core.resources 2 2 2025-04-09 09:37:01.881
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2025-04-09 09:37:01.881
+!MESSAGE The project description file (.project) for 'question' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

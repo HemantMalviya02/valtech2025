@@ -1,0 +1,26 @@
+server:
+  port: 9030
+  
+spring:
+  application:
+    name: QUIZ-SERVICE
+
+  datasource:
+    driver-class: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/question
+    username: postgres
+    password: postgres
+
+  sql:
+    init: 
+      mode: always
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

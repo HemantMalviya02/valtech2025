@@ -1,0 +1,21 @@
+spring:
+  application:
+  name: QUIZRESULT-SERVICE
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/questions
+    username: postgres
+    password: postgres
+
+  jpa: 
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 9070
